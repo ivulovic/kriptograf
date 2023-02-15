@@ -1,16 +1,22 @@
 # Kriptograf
 
+## About
+
 Text decryption effect.
 
 [Github Repository](https://github.com/ivulovic/kriptograf)
 
-### Install
+## Demo Example
+
+[Demo Example](https://ivn.rs/craft/cryptograph)
+
+## Install
 
 ```
 yarn add @ivnv/kriptograf
 ```
 
-### Usage
+## Usage
 
 ```
 import Kriptograf from "@ivnv/kriptograf";
@@ -19,11 +25,7 @@ const Cryptograph = Kriptograf();
 Cryptograph.run("Kriptograf is the awesome tool!", 20, console.log);
 ```
 
-### Demo
-
-[Demo and Example](https://ivn.rs/craft/cryptograph)
-
-### Test
+## Test
 
 ```
 yarn run test
