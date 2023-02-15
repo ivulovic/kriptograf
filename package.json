@@ -1,0 +1,26 @@
+{
+  "name": "@ivnv/kriptograf",
+  "version": "0.0.2",
+  "description": "Text decryption effect",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js",
+    "start": "node ./test.js",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivulovic/kriptograf.git"
+  },
+  "keywords": [
+    "kriptograf",
+    "cryptography",
+    "ivnv"
+  ],
+  "author": "Ivan Vulovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivulovic/kriptograf/issues"
+  },
+  "homepage": "https://github.com/ivulovic/kriptograf#readme"
+}
