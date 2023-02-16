@@ -1,12 +1,11 @@
 {
   "name": "@ivnv/kriptograf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Text decryption effect",
   "main": "index.js",
   "scripts": {
     "test": "node ./test.js",
-    "start": "node ./test.js",
-    "publish": "npm publish --access public"
+    "start": "node ./test.js"
   },
   "repository": {
     "type": "git",

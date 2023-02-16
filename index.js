@@ -3,7 +3,6 @@ var Subset = require('./subsets.js');
 function Kriptograf() {
   var sentence;
   var decrypted;
-  var encryptionStateRef;
   var placeholders = Subset.en_alphabet;
 
   function encrypt() {
@@ -11,31 +10,33 @@ function Kriptograf() {
 
     for (let i = 0; i < o.length; i++) {
       if (placeholders.includes(o[i])) {
-        o[i] =
-          placeholders[Math.floor(Math.random() * placeholders.length)];
+        o[i] = placeholders[Math.floor(Math.random() * placeholders.length)];
       }
     }
     return o.join("");
   }
 
   function decrypt() {
-    var enc = String(encryptionStateRef).split("");
+    var enc = decrypted.split("").filter(x => !!x);
+    if(decrypted.length !== sentence.length){
+      decrypted = encrypt();
+    }
     for (let i = 0; i < sentence.length; i++) {
       if (enc[i] !== sentence[i]) {
-        enc[i] = placeholders[Math.floor(Math.random() * placeholders.length)];
+        let r = placeholders[Math.floor(Math.random() * placeholders.length)];
+        enc[i] = r;
         var newSentence = enc.join("");
-        encryptionStateRef = newSentence;
-        decrypted = newSentence;
+        if(newSentence.length === sentence.length){
+          decrypted = newSentence;
+        }
       }
     }
     return decrypted;
   }
 
-  function run(s, speed = 20, cb = (s) => null){
+  const run = (s, speed = 20, cb = (s) => null) => {
     sentence = s;
-
-    encryptionStateRef = encrypt();
-
+    decrypted = encrypt();
     let interval = setInterval(() => {
         const isDone = decrypted === sentence;
         decrypted = decrypt();
