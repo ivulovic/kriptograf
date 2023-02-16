@@ -8,7 +8,7 @@ Text decryption effect.
 
 ## Demo Example
 
-[Demo Example](https://ivn.rs/craft/cryptograph)
+[Demo Example](https://ivn.rs/craft/kriptograf)
 
 ## Install
 
