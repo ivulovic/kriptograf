@@ -24,6 +24,7 @@ import Kriptograf from "@ivnv/kriptograf";
 
 var sentenceEN = "Kriptograf is the awesome tool!";
 var sentenceRS = "Криптограф је страва алат!";
+var sentenceHR = "Kriptograf je odličan alat!";
 var sentenceME = "с́утра ћу ићи да једем и има да из́једем много пасуља!";
 var sentenceMK = "oвој господин ќе плати сè.";
 
@@ -40,8 +41,12 @@ Cryptograph.run(sentenceRS, speed, console.log);
 // Cryptograph.setSubset('mk-MK');
 // Cryptograph.run(sentenceMK, speed, console.log);
 
+// Cryptograph.setSubset('hr-HR');
+// Cryptograph.run(sentenceHR, speed, console.log);
+
 // Cryptograph.setSubset('en');
 // Cryptograph.run(sentenceEN, speed, console.log);
+
 ```
 
 ## Test
